@@ -5,11 +5,12 @@ import { Resend } from 'resend';
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
+  const {name} = req.body
   const { data, error } = await resend.emails.send({
-    from: 'Acme <onboarding@resend.dev>',
-    to: ['delivered@resend.dev'],
-    subject: 'Hello world',
-    react: await EmailTemplate({ firstName: 'John' }),
+    from: 'Home Castle Painting <estimate@jasoncabrera.com>',
+    to: ['brandoncabrera707@gmail.com'],
+    subject: 'Estimate Request',
+    react: await EmailTemplate({ Name : name }),
   });
 
   if (error) {
