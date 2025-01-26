@@ -5,7 +5,7 @@ import Link from 'next/link'
 export default function App({ Component, pageProps }: AppProps) {
   return (    
    <>
-      <div id="navBarDiv" className="flex flex-row sticky p-2 top-0 bg-navbarActive text-white font-bold text-xl">
+      <div id="navBarDiv" className="flex flex-row sticky p-2 top-0 bg-navbarActive text-white font-bold text-xl z-50">
         <div id="logoDiv" className="flex flex-row justify-start">
           <button>Home Castle Painting</button>
         </div>
